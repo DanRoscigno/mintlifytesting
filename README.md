@@ -8,5 +8,6 @@
    ```sh
    git mv docs.json favicon.svg index.mdx logo quickstart.mdx content
    ```
-6. Commit your repo changes and merge to main to cause mintlify to rebuild the site.
+6. Modify the file `content/index.mdx` so that you can verify the changes in the preview that mintlify builds when you submit a PR with the docs.json and content move.
+7. Open a PR with the changes and wait for a mintlify preview. Verify the change.
 
