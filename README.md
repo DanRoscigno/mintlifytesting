@@ -1,55 +1,18 @@
-# Mintlify Starter Kit
+# Testing mintlify
 
-Use the starter kit to get your docs deployed and ready to customize.
+1. Add `Mintlify` to the spell checker everywhere so you stop ending up with `Minify` :)
+2. Acknowledge that the mintlify Starter Kit deployment pops the MDX files into the root dir of the GitHub repo it creates, and that is probably not what you want.
+3. To configure mintlify to read from a different dir open [app.mintlify.com](https://app.mintlify.com/) and expand the left side menu (you might not see it, look for a small cube in the top left corner, or set the width of your browser wider). Open settings -> Git
+4. In the  Git settings switch on `docs.json is in a subdirectory` and specify the path to the directory used. For me this is `/content`. You can save the change, as the mintlify site will not rebuild on a config change, it waits for a commit to `main` in your repo.
+5. Move your content into the directory that you configured as the location for docs.json. In my case I moved docs.json, the MDX file from the starter kit, and images into `content/`:
+   ```sh
+   git mv docs.json favicon.svg index.mdx logo quickstart.mdx content
+   ```
+6. Modify the file `content/index.mdx` so that you can verify the changes in the preview that mintlify builds when you submit a PR with the docs.json and content move.
+7. Open a PR with the changes and wait for a mintlify preview. Verify the change.
+   > Tip
+   >
+   > you can see previews in [app.mintlify.com](https://app.mintlify.com) under Publishes -> Previews
+8. Merge the PR if you like, and verify the change at the production URL
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
-
-```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the guides for [Claude Code](https://www.mintlify.com/docs/guides/claude-code), [Codex](https://www.mintlify.com/docs/guides/codex), [Cursor](https://www.mintlify.com/docs/guides/cursor), and [Devin Desktop](https://www.mintlify.com/docs/guides/devin-desktop) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
-```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
