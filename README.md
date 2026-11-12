@@ -10,4 +10,9 @@
    ```
 6. Modify the file `content/index.mdx` so that you can verify the changes in the preview that mintlify builds when you submit a PR with the docs.json and content move.
 7. Open a PR with the changes and wait for a mintlify preview. Verify the change.
+   > Tip
+   >
+   > you can see previews in [app.mintlify.com](https://app.mintlify.com) under Publishes -> Previews
+8. Merge the PR if you like, and verify the change at the production URL
+
 
