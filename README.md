@@ -15,4 +15,12 @@
    > you can see previews in [app.mintlify.com](https://app.mintlify.com) under Publishes -> Previews
 8. Merge the PR if you like, and verify the change at the production URL
 
+## Astro
+
+There is an Astro starter, and configuration using that starter is in the [mintlify docs](https://www.mintlify.com/docs/guides/custom-frontend).
+
+Since I already have a mintlify deployment I will modify the default mintlify starter by hand:
+
+1. 
+
 

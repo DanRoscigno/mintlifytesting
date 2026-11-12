@@ -1,47 +1,93 @@
 ---
 title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+description: "Set up your development environment and add your first page"
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
-
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+## Set up your environment
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Install dependencies">
+    From the project root, install the required packages:
 
     ```bash
-    npm install your-package
+    npm install
     ```
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
+  <Step title="Start the dev server">
+    Run the Astro development server:
 
     ```bash
-    your-cli init
+    npm run dev
+    ```
+
+    Open the URL shown in your terminal (usually `http://localhost:4321`) to see your site.
+  </Step>
+  <Step title="Edit a page">
+    Open `content/index.mdx` in your editor and make a change. You'll see changes in your local preview.
+  </Step>
+</Steps>
+
+## Project structure
+
+Your content lives in the `content/` directory:
+
+| Path | Purpose |
+|------|---------|
+| `content/*.mdx` | Documentation pages written in MDX. |
+| `content/docs.json` | Configuration for navigation and site metadata. |
+| `content/images/` | Images referenced from your pages. |
+| `src/` | Astro layouts, components, and styles you can customize. |
+
+## Add a new page
+
+<Steps>
+  <Step title="Create an MDX file">
+    Create a new file in the `content/` directory. For example, `content/my-page.mdx`:
+
+    ```mdx content/my-page.mdx
+    ---
+    title: "My page"
+    description: "A brief description of this page"
+    ---
+
+    Write your content here using MDX.
     ```
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
+  <Step title="Add it to navigation">
+    Open `content/docs.json` and add the page path (without the `.mdx` extension) to the relevant navigation group:
 
-    ```bash
-    your-cli start
+    ```json content/docs.json
+    {
+      "group": "Getting started",
+      "pages": [
+        "index",
+        "quickstart",
+        "my-page"
+      ]
+    }
     ```
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## Deploy
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+Push your changes to GitHub. If your hosting is configured to build on push, your site deploys automatically.
+
+To build the site locally:
+
+```bash
+npm run build
+```
+
+The output goes to the `dist/` directory.
+
+## Next steps
+
+<Columns cols={2}>
+  <Card title="Customize your site" icon="palette" href="/customization">
+    Configure navigation, colors, and layout.
+  </Card>
+  <Card title="Components" icon="grid-2" href="/components">
+    See the available components.
+  </Card>
+</Columns>
