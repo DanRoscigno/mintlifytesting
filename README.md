@@ -21,6 +21,14 @@ There is an Astro starter, and configuration using that starter is in the [mintl
 
 Since I already have a mintlify deployment I will modify the default mintlify starter by hand:
 
-1. 
+1. using `/content/` instead of `/docs/` (the astro default) does not appear to work. I changed all of the config files from docs to content and pages were not rendered. Not a big deal, switching to docs fixed everything.
+2. Copying all of the astro starter files into place works. I am glad I did it by hand as I inspected each file as I went.
+
+I now have the choice to run a local dev server to test changes before opening a PR to see a preview. With astro:
+
+```sh
+npm install
+npm run dev
+```
 
 
