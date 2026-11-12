@@ -27,8 +27,13 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "GitHub",
+          "href": "https://github.com/DanRoscigno/mintlifytesting",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Linkedin",
+          "href": "https://linkedin.com/in/danroscigno",
           "icon": "book-open-cover"
         }
       ]

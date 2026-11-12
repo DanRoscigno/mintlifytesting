@@ -57,7 +57,7 @@ The site will be available at `http://localhost:4321`.
 ## Project Structure
 
 ```
-├── content/                # Documentation content (MDX pages, images, config)
+├── docs/                # Documentation content (MDX pages, images, config)
 │   ├── docs.json        # Navigation and site configuration
 │   ├── index.mdx        # Homepage
 │   └── ...
@@ -76,6 +76,6 @@ The site will be available at `http://localhost:4321`.
 
 ## Customizing Content
 
-Documentation pages live in the `content/` directory as MDX files. Site navigation and metadata are configured in `content/docs.json`.
+Documentation pages live in the `docs/` directory as MDX files. Site navigation and metadata are configured in `docs/docs.json`.
 
 See the [Mintlify documentation](https://mintlify.com/docs) for details on available components and configuration options.

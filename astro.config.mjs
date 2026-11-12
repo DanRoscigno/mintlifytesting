@@ -6,7 +6,7 @@ import { mintlify } from '@mintlify/astro';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  integrations: [mintlify({ docsDir: './content' }), react(), mdx()],
+  integrations: [mintlify({ docsDir: './docs' }), react(), mdx()],
   markdown: {
     shikiConfig: {
       theme: 'github-light-default',
